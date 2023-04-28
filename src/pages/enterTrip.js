@@ -37,13 +37,13 @@ const EnterTrip = () => {
   const handleSubmit = (event) => {
     event.preventDefault();
     if(showDistanceKilometers == true){
-        Axios.post("https://c322-travel-reimbursement.herokuapp.com/api/insert/trip", {
+        Axios.post("c322-travel-reimbursement.herokuapp.com/api/insert/trip", {
             userID: userID,
             distance: dKm
         })
     }
     else if(showDistanceMiles == true){
-        Axios.post("https://c322-travel-reimbursement.herokuapp.com/api/insert/trip", {
+        Axios.post("c322-travel-reimbursement.herokuapp.com/api/insert/trip", {
             userID: userID, 
             distance: dm * 1.60934
         })
