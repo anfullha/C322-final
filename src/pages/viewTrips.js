@@ -17,7 +17,7 @@ const ViewTrips = () => {
 
 
     const getInfo = () => {
-        Axios.get(`https://c322-travel-reimbursement.herokuapp.com/api/get/trips/UserID/${userID}`)
+        Axios.get(`c322-travel-reimbursement.herokuapp.com/api/get/trips/UserID/${userID}`)
         .then((response) => {
             setData(response.data);
             console.log(response.data);
@@ -26,7 +26,7 @@ const ViewTrips = () => {
             setTotalDistance(total);
         })
 
-        Axios.get(`https://c322-travel-reimbursement.herokuapp.com/git api/get/username/${userID}`)
+        Axios.get(`c322-travel-reimbursement.herokuapp.com/git api/get/username/${userID}`)
         .then((response) => {
             setUsername(response.data);
             console.log(response.data);
