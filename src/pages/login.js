@@ -18,7 +18,7 @@ const Login = () => {
   const handleSubmit = (event) => {
     event.preventDefault();
     
-    Axios.post("https://c322-travel-reimbursement.herokuapp.com/api/login/user", {
+    Axios.post("c322-travel-reimbursement.herokuapp.com/api/login/user", {
       username: username,
       password: password
     }).then((response) => {
