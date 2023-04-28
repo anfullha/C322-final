@@ -10,7 +10,7 @@ const NavBar = () => {
   const userID = authContext.userID;
   const [username, setUsername] = useState([]);
   const getUsername = async () => {
-    const response = await Axios.get(`http://localhost:3002/api/get/username/${userID}`);
+    const response = await Axios.get(`https://c322-travel-reimbursement.herokuapp.com/${userID}`);
     setUsername(response.data);
   };
   useEffect(() => {
