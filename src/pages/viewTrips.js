@@ -14,7 +14,7 @@ const ViewTrips = () => {
     const [username, setUsername] = useState([]);
     const [totalDistance, setTotalDistance] = useState(0);
     
-
+const refresh = () => {window.location.reload(true)}
 
     const getInfo = () => {
         Axios.get(`https://c322-travel-reimbursement.herokuapp.com/api/get/trips/UserID/${userID}`)
@@ -82,6 +82,7 @@ const ViewTrips = () => {
             <td  style={{ whiteSpace: "nowrap",fontWeight: "bold", paddingLeft:'50px'}}>Total Reimbursement:</td>
             <td style={{fontWeight: "bold", color:"green", paddingLeft:'10px'}}>${(totalDistance * 0.621371 / 25.4 * 3.66).toFixed(2)}</td>
             <td></td>
+<button class="btn btn-secondary" style={{marginLeft:'10px'}} onClick={refresh}>Refresh </button>
         </tr>
         </div>
         </div>
