@@ -31,7 +31,7 @@ const Register = () => {
           return;
         }
         
-        Axios.post("c322-travel-reimbursement.herokuapp.com/api/get/userID", {
+        Axios.post("https://c322-travel-reimbursement.herokuapp.com/api/get/userID", {
             username: username
         }).then((response) => { 
             if (response.data && response.data.length > 0) {
@@ -40,7 +40,7 @@ const Register = () => {
                     if (password.length < 6) {
                         setError("Password must be at least 6 characters long.");
                     } else {
-                        Axios.post("c322-travel-reimbursement.herokuapp.com/api/insert/user", {
+                        Axios.post("https://c322-travel-reimbursement.herokuapp.com/api/insert/user", {
                             username: username,
                             password: password
                         }).then(() => {
